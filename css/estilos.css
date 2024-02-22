@@ -22,6 +22,8 @@ header {
 
 h1 {
     color: #16b990;
+    transition: font-size 0.2s ease-in-out,
+    font-style 0.2s ease-in-out;
 }
 
 h2 {
@@ -34,9 +36,22 @@ a {
     text-decoration: none;
 }
 
+cite{
+    transition: font-size 0.2s ease-in-out;
+}
+
 a:hover {
     color: #346e60;
     text-decoration: underline;
+}
+
+.titulo:hover{
+    font-size: 35px;
+    font-style: italic;
+}
+
+cite:hover{
+    font-size: 20px;
 }
 
 section {
@@ -73,9 +88,12 @@ footer {
     background-color: #76ad9b;
     padding: 20px;
     border-radius: 8px;
+    border: 2px solid #FFFFFF;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 250px;
     text-align: center;
+    transition: transform 0.3s ease-in-out, 
+    width 0.3s ease-in-out;
 }
 
 .language span {
@@ -103,9 +121,12 @@ footer {
     background-color: #76ad9b;
     padding: 20px;
     border-radius: 8px;
+    border: 2px solid #FFFFFF;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 250px;
     text-align: center;
+    transition: transform 0.3s ease-in-out, 
+    width 0.3s ease-in-out;
 }
 
 .skill span {
@@ -132,9 +153,12 @@ footer {
     background-color: #76ad9b;
     padding: 20px;
     border-radius: 8px;
+    border: 2px solid #FFFFFF;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 400px; /* Ajusta según necesidad */
     text-align: center;
+    transition: transform 0.3s ease-in-out, 
+    width 0.3s ease-in-out;
 }
 
 .job span {
@@ -161,9 +185,12 @@ footer {
     background-color: #76ad9b;
     padding: 20px;
     border-radius: 8px;
+    border: 2px solid #FFFFFF;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 400px; /* Ajuste según necesidad */
     text-align: center;
+    transition: transform 0.3s ease-in-out, 
+    width 0.3s ease-in-out;
 }
 
 .degree span {
@@ -190,12 +217,57 @@ footer {
     background-color: #76ad9b;
     padding: 20px;
     border-radius: 8px;
+    border: 2px solid #FFFFFF;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 400px; /* Ajuste según necesidad */
     text-align: center;
+    transition: transform 0.3s ease-in-out, 
+    width 0.3s ease-in-out;
 }
 
 .course span {
     font-size: 50px;
     margin-bottom: 10px;
+}
+
+.job:hover, .degree:hover, .course:hover {
+    transform: translateX(10px) scale(1.05)
+     rotate(2deg);
+}
+
+.language:hover, .skill:hover {
+    transform: translateX(10px) scale(1.05)
+     rotate(2deg);
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #ffffff;
+    }
+
+    h1, a{
+        color: #268f76;
+    }
+
+    h2, h3, p, cite{
+        color: #000000;
+    }
+
+    :root {
+        --main-color: #000000;
+    }
+
+    #experiencia, #formacion-reglada, 
+    #aficiones, #idiomas, #informatica {
+        background-color: #3ebd9d;
+    }
+
+    .job, .degree, .course, .language, 
+    .skill {
+        background-color: #97e6d2;
+    }
+
+    footer{
+        background-color: #FFFFFF;
+    }
 }
